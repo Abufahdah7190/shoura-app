@@ -1,0 +1,12 @@
+<resources>
+    <style name="Theme.Shoura" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#4767D5</item>
+        <item name="colorPrimaryVariant">#304BB1</item>
+        <item name="colorSecondary">#19A98A</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">#F7F8FC</item>
+        <item name="android:navigationBarColor">#F7F8FC</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

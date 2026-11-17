@@ -1,0 +1,16 @@
+package com.shoura.app
+
+data class RegisterRequest(val name: String, val handle: String, val email: String, val password: String)
+data class LoginRequest(val email: String, val password: String)
+data class AuthUser(val id: Int, val name: String, val handle: String, val email: String, val bio: String)
+data class AuthResponse(val user: AuthUser, val accessToken: String, val expiresAtUtc: String)
+data class CreatePostRequest(val content: String, val mediaUrl: String? = null, val mediaType: String = "text")
+data class PostUser(val id: Int, val name: String, val handle: String, val bio: String)
+data class FeedPost(val id: Int, val content: String, val mediaUrl: String?, val mediaType: String, val likesCount: Int, val retweetsCount: Int, val createdAt: String, val userId: Int, val user: PostUser?)
+data class FeedPage(val items: List<FeedPost>, val nextCursor: Int?, val nextCursorCreatedAt: String?, val hasMore: Boolean)
+data class MediaUpload(val url: String, val mediaType: String, val sizeBytes: Long)
+data class SendMessageRequest(val receiverId: Int, val content: String = "", val mediaUrl: String? = null, val mediaType: String = "text")
+data class ChatMessage(val id: Int, val senderId: Int, val receiverId: Int, val content: String, val mediaUrl: String?, val mediaType: String, val sentAt: String)
+data class PublicContact(val id: Int, val name: String, val handle: String, val bio: String)
+data class AiMediaRequest(val mediaUrl: String)
+data class AiResult(val text: String, val model: String)
